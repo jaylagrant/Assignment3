@@ -1,0 +1,115 @@
+/*   * set's rules for the entire page    */
+* {
+    box-sizing: border-box; /*This line makes sure the width and height are the correct sizes no matter the padding */
+    font-family: "Lucida Console", Monaco, monospace;
+
+}
+
+/*Selecting elements with the id attribute*/
+.outline{
+    border: .5px solid blue;
+}
+body{
+    background-color: mediumpurple;
+
+}
+/*this is the CSS that styles a grid-container div, initially it's not being used. To use it create a new div with class="grid-container" and place all your rows and content inside it*/
+.grid-container{
+    width: 100%;
+    max-width: 1260px;
+    margin:auto ;/* this line makes sure the container div is centered */
+
+}
+
+.row{
+    overflow:auto;
+    background-color: lightblue;
+    margin: 10px
+}
+
+.testImg, .testImg2{
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.header{
+    width:100%;
+    padding: 15px;
+    background: white;
+    border: .5px solid black;
+
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+     ;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+
+/*Selecting based off wildcard strings*/
+
+[class*='col-'] { /* This css rule applies to any element that has the string "col-" in its class*/
+    float: left;
+    min-height: 1px;
+    /*-- our gutter inside each cell around it's content, change the value to see how it works--*/
+    padding: 10px;
+    border: .5px solid black;
+    /**********Another way to set background color: Change the number values in it and see what happens**********/
+    background: white;
+}
+
+
+/*Mobile Settings*/
+@media screen and (max-width: 500px) {
+    body {
+        background-color: mediumpurple;
+    }
+    .m-col-1 {width: 25%;}
+    .m-col-2 {width: 50%;}
+    .m-col-3 {width: 75%;}
+    .m-col-4 {width: 100%;}
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
